@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Nice to see yah, Coffee</h1>
+<div class="row">
+    {% for coffee in keopi%}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ coffee.image }}" class="card-img-top" alt="..." width="500" height="300">
+                <div class="card-body">
+                    <h5 class="card-title">{{ coffee.name }}</h5>
+                    <p class="card-text">P {{ coffee.price }}</p>
+                    <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
