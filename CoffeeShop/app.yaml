@@ -1,0 +1,10 @@
+runtime: python27
+
+handlers:
+- url: /
+  static_files: ../keopi/templates/home.html
+  upload: ../keopi/templates/home.html
+
+- url: /(.*)
+  static_files: ../\1
+  upload: ../(.*)
